@@ -1,0 +1,16 @@
+/* Colors */
+$primary-lightcyan: hsl(193, 38%, 86%);
+$primary-neongreen: hsl(150, 100%, 66%);
+$neutral-grayishblue: hsl(217, 19%, 38%);
+$neutral-darkgrayishblue: hsl(217, 19%, 24%);
+$neutral-darkblue: hsl(218, 23%, 16%);
+
+/* Font */
+@font-face {
+    font-family: Manrope;
+    src: url("../fonts/Manrope-VariableFont_wght.ttf");
+}
+$fontsize: 2.8rem;
+
+/* Viewport */
+$mobilesize: 375px;

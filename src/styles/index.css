@@ -1,0 +1,79 @@
+/* Colors */
+/* Font */
+@font-face {
+  font-family: Manrope;
+  src: url("../fonts/Manrope-VariableFont_wght.ttf");
+}
+/* Viewport */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.Advice-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(218deg, 23%, 16%);
+}
+
+.Advice-advice-container {
+  height: 350px;
+}
+
+.Advice-advice-container-inner {
+  max-width: 500px;
+  min-width: 350px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(217deg, 19%, 24%);
+  padding: 2rem 4rem;
+  border-radius: 25px;
+}
+.Advice-advice-container-inner p {
+  font-family: Manrope;
+  text-align: center;
+}
+.Advice-advice-container-inner .Advice-advice-id {
+  position: absolute;
+  top: 3rem;
+  color: hsl(150deg, 100%, 66%);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.Advice-advice-container-inner .Advice-advice-text {
+  color: hsl(193deg, 38%, 86%);
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.Advice-advice-container-inner .Advice-divider {
+  position: absolute;
+  bottom: 5rem;
+  width: 80%;
+}
+.Advice-advice-container-inner .Advice-advice-btn {
+  position: absolute;
+  bottom: -2.5rem;
+  border-radius: 50%;
+  border: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(150deg, 100%, 66%);
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
