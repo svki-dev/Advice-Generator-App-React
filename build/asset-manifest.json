@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.566a23f4.css",
+    "main.js": "/static/js/main.a7d40e9b.js",
+    "static/js/787.5e06b237.chunk.js": "/static/js/787.5e06b237.chunk.js",
+    "static/media/Manrope-VariableFont_wght.ttf": "/static/media/Manrope-VariableFont_wght.cae461b0196986f4250c.ttf",
+    "index.html": "/index.html",
+    "static/media/icon-dice.svg": "/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
+    "static/media/pattern-divider-desktop.svg": "/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
+    "main.566a23f4.css.map": "/static/css/main.566a23f4.css.map",
+    "main.a7d40e9b.js.map": "/static/js/main.a7d40e9b.js.map",
+    "787.5e06b237.chunk.js.map": "/static/js/787.5e06b237.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.566a23f4.css",
+    "static/js/main.a7d40e9b.js"
+  ]
+}
