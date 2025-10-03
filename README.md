@@ -60,3 +60,19 @@ I will continue to work with React and look into state management.
 -   Website - [Sven Kilcher | Dev](https:sven-kilcher.dev)
 -   Frontend Mentor - [@WP-HH](https://www.frontendmentor.io/profile/WP-HH)
 -   Github - [@ysvki-dev](https://github.com/svki-dev)
+
+## Lokale Entwicklung
+
+-   Entwicklung starten: `npm start`
+-   Standard-Port: `3000` (über `PORT=3000 npm start` änderbar)
+-   Build erzeugen: `npm run build`
+
+## Anti-Caching Hinweis (Advice API)
+
+-   Die Advice Slip API kann durch Browser/Proxies gecacht werden. Um stets neue Sprüche zu erhalten, wird ein Zeitstempel-Query (`?t=Date.now()`) angehängt und `fetch` mit `cache: 'no-store'` sowie Header `Cache-Control: no-cache` verwendet.
+
+## UX/Fehlerbehandlung
+
+-   Während des Ladens wird der Button deaktiviert (`disabled`) und `aria-busy` gesetzt.
+-   Der Spruch-Text hat `aria-live="polite"` für bessere A11y.
+-   Bei Fehlern wird eine kurze Fehlermeldung angezeigt und kein alter Wert überschrieben.

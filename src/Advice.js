@@ -10,28 +10,41 @@ class Advice extends Component {
 
     this.state = {
       id: 0,
-      advice: "Hier kommt dein Spruch des Tages"
+      advice: "Hier kommt dein Spruch des Tages",
+      loading: false
     }
 
     this.getAdvice = this.getAdvice.bind(this);
   }
 
   getAdvice() {
+    this.setState({ loading: true });
+    const id = Math.floor(Math.random() * 224) + 1;
+    const baseUrl = "https://api.adviceslip.com/advice/";
+    const requestUrl = `${baseUrl}${id}?t=${Date.now()}`;
 
-    const randomNumber = Math.round(Math.random() * 225);
-    const url = "https://api.adviceslip.com/advice/";
-
-    fetch(url + randomNumber)
-      .then(res => res.json())
-      .then(
-        (advice) => {
-          this.setState({
-            id: advice.slip.id,
-            advice: advice.slip.advice
-          });
+    fetch(requestUrl, { cache: 'no-store' })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
         }
-      )
-
+        return res.json();
+      })
+      .then((advice) => {
+        this.setState({
+          id: advice.slip.id,
+          advice: advice.slip.advice
+        });
+      })
+      .catch(() => {
+        this.setState({
+          id: 0,
+          advice: 'Fehler beim Laden. Bitte erneut versuchen.'
+        });
+      })
+      .finally(() => {
+        this.setState({ loading: false });
+      })
   }
 
   render() {
@@ -41,9 +54,9 @@ class Advice extends Component {
           <div className='Advice-advice-container'>
             <div className='Advice-advice-container-inner'>
               <p className='Advice-advice-id'>Advice # {this.state.id}</p>
-              <p className='Advice-advice-text'>{this.state.advice}</p>
+              <p className='Advice-advice-text' aria-live='polite'>{this.state.advice}</p>
               <img src={divider} alt='SVG Desktop Divider' className='Advice-divider'></img>
-              <button className='Advice-advice-btn' onClick={this.getAdvice} ><img src={dice} alt='Dice Icon' className='Advice-advice-btn-icon' /></button>
+              <button className='Advice-advice-btn' onClick={this.getAdvice} disabled={this.state.loading} aria-busy={this.state.loading} ><img src={dice} alt='Dice Icon' className='Advice-advice-btn-icon' /></button>
             </div>
 
           </div>
